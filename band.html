@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>NastyMatter</title>
+    <meta http-qeuiv="content-type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/music.css">
+    <link rel="icon" href="favicon.png" sizes="16x16 32x32 64x64 128x128"
+                                        type="image/ico">
+    <script type="text/javascript" src="js/navigation.js"></script>
+  </head>
+  <body onload="loadPlayer();" onunload="saveState();">
+    <div id="header">
+      <div id="navigation">
+        <ul>
+          <li><a href="index.html">Neuigkeiten</a></li>
+          <li><a href="music.html">Musik</a></li>
+          <li><a href="pictures.html">Bilder</a></li>
+          <li><a href="band.html">Band</a></li>
+          <br /><li></li>
+        </ul>
+      </div><!--navigation-->
+    </div><!--header-->
+    <img id="headerImage" src="img/header.png"></img>
+    <div id="content">
+      <div class="post">
+        <p>
+          Hier eine weitere unnütze Geschichte über eine Band, die sowas von etwas ganz besonderes ist:
+        </p>
+
+        <p>
+Es war im Jahr 2009, als sich ein paar superlustige Typen (natürlich total besoffen) im Sandkasten (in der besten Stadt der Welt) getroffen und auf Förmchen klopfend dazu entschlossen haben, eine Band zu gründen.
+Natürlich konnte niemand ein Instrument spielen und natürlich war es total schwer sich einen x-beliebigen Namen auszudenken. Nach dem sich unsere drei Gehirnzellen einen Wolf geschruppt haben, entschieden wir uns nach StrOi!selkuchen, Anarschi und Scheiße für den Namen NastyMatter.
+Die ersten Auftritte fanden dann in einem Laden in Weimar statt. Dort fanden wir uns aber bald alle gegenseitig scheiße und so mussten wir uns nach anderen Superevents umschauen.
+Nebenbei verließ uns unser erster Bassist (das einzige Bandmitglied, das wirklich im Guten von uns ging) für Arbeit im Westen. Viel Spaß dort!
+Kurz zurück zu Weimar: ihr schuldet uns immernoch 20€ Spritkohle!
+        </p>
+        <p>
+Unser erstes Demo in leider saumäßiger Qualität haben wir irgendwann 2010 aufgenommen.
+"Böse rufts aus dem Wald" hieß das Ding. Wer Interesse daran hat, kann mal das Internet fragen, sich den Dreck runterladen und auch das Cover selbst ausdrucken.
+        </p>
+        <p>
+Konzerte haben wir 2010 auch gespielt. Eins davon fand im Café Wagner in Jena statt, zusammen mit "Kunstrasendünger" und "Mach mit, Kack ab!".
+Das war aber außer dem Ton, uns und den Leuten ziemlich kacke. 
+Wir hatten auch noch woanders gespielt, weiß nur keiner mehr.
+        </p>
+        <p>
+2011 gings dann richtig ab, in Schleiz und in Erfurt, in Jena auch.
+        </p>
+        <p>
+2012 gab es wieder Sachen zu hören (das zweite Demo "Soziopath") und 2013 ("Nebel, Krieg und Körperverletzung") auch.
+Die Soziopath- Scheibe wurde dann 2014 noch einmal neu eingespielt, diesmal mit mehr Geschick. Wer das nöige Know How besitzt, bei Youtube unseren Badnamen einzugeben, muss sich die Scheibe nicht entgehen lassen. Das ganze Teil gibt es auch auf NastyMatter.net zum Download. 
+        </p>
+        <p>
+Die Band besteht jetzt aus Julian (der ist fett und voll mit Haaren) an der Gitarre, Manthey (Pinselfrisur und Nase im Gesicht) am Schlagzeug und euren hochgeschätzten Author Tom (der Bandälteste, muss man erlebt haben) am Bass.
+Da wir lieber mit zwei Gitarren spielen, haben wir uns ein paar Bassisten zum Vorspielen eingeladen. Wenn alles glatt geht, sind wir dann bald wieder zu viert.
+Wer sonst noch so in der Band war ist eigentlich egal. Guckt euch alte Fotos an oder fragt die, die damals dabei waren. 
+        </p>
+        <p>
+Was zukünftige Auftritte angeht sind wir selbstverständlich anspruchslos. 
+Wir spielen einfach überall- so definieren wir "auf dem Boden bleiben".
+        </p>
+      </div> <!--post-->
+    </div><!--content-->
+
+    <div id="footer">
+      <div id="player">
+        <audio id="audio">
+        </audio>
+        <div id="control">
+          <div class="icon"  id="backward"  onclick="backward()"></div>
+          <div class="icon"  id="stop"      onclick="stop()"></div>
+          <div id="playlistContainer">
+            <div class="label" id="currentTitle"></div>
+            <div id="playlistSlideIn">
+              <ul id="playlist">
+                <li>Dolchsto&szlig;</li>
+                <li>Neue Wege</li>
+                <li>Wenn die Flut kommt</li>
+              </ul>
+            </div>
+          </div>
+          <div class="icon"  id="play"      onclick="play()"></div>
+          <div class="icon"  id="pause"     onclick="pause()"></div>
+          <div class="icon"  id="forward"   onclick="forward()"></div>
+          <div class="label" id="currentTime">00:00</div>
+          <input type="range" id="seek" min="0" max="100" value="0"
+                 onchange="seek()"/>
+          <div class="label" id="totalTime">00:00</div>
+          <div id="volume">
+            <div class="icon"  id="mute"      onclick="unmute()"></div>
+            <div class="icon"  id="quiet"     onclick="mute()"></div>
+            <div class="icon"  id="moderate"  onclick="mute()"></div>
+            <div class="icon"  id="loud"      onclick="mute()"></div>
+            <div id="volumeSlideIn">
+              <div class="icon"  id="plus" onclick="volumeUp()"></div>
+              <br />
+              <input type="range" id="volumeRange" min="0" max="100" value="100"
+                     orient="vertical" onchange="changeVolume()"/>
+              <br />
+              <div class="icon"  id="minus"     onclick="volumeDown()"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="links">
+        <a href="mailto:kontakt@nastymatter.net">kontakt@nastymatter.net</a>
+        <a href="https://www.facebook.com/nastymatterband">Facebook</a>
+        <a href="https://www.youtube.com/channel/UC1mlShNWiVUqvYZOj-kKfqA">
+          YouTube
+        </a>
+      </div>
+      <div id="cookie" onclick="hideCookieMessage()">
+        <p>Diese Seite nutzt Cookies. Mit der Nutzung der Webseite stimmen Sie der Nutzung von Cookies zu.</p>
+        <p>This website uses cookies. By surfing this site, you accept the usage of cookies.</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/player.js"></script>
+  </body>
+</html>

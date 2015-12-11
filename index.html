@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>NastyMatter</title>
+    <meta http-qeuiv="content-type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/music.css">
+    <link rel="icon" href="favicon.png" sizes="16x16 32x32 64x64 128x128"
+                                        type="image/ico">
+    <script type="text/javascript" src="js/navigation.js"></script>
+  </head>
+  <body onload="loadPlayer();" onunload="saveState();">
+    <div id="header">
+      <!--<div id="logo"><img src="img/logo-small.png" /></div>
+      <div id="mail">
+        <a href="mailto:kontakt@nastymatter.net">kontakt@nastymatter.net</a>
+        </div>-->
+      <div id="navigation">
+        <ul>
+          <li><a href="index.html">Neuigkeiten</a></li>
+          <li><a href="music.html">Musik</a></li>
+          <li><a href="pictures.html">Bilder</a></li>
+          <li><a href="band.html">Band</a></li>
+          <br /><li></li>
+        </ul>
+      </div><!--navigation-->
+    </div><!--header-->
+    <img id="headerImage" src="img/header.png"></img>
+    <div id="content">
+
+      <div class="post">
+        <h1 class="center">Konzert in Erfurt</h1>
+        <img class="fullWidthImage" src="img/20151204-1.jpg">
+      </div><!--post-->
+
+      <div class="post">
+        <h1 class="center">Konzert in Hamburg</h1>
+        <img class="fullWidthImage" src="img/20151128-1.jpg">
+      </div><!--post-->
+
+      <div class="post">
+        <h1 class="center">Artikel in der Melodie & Rhytmus</h1>
+        <img src="img/mundr.jpg">
+        Nach zwei Demo-Tapes und mehr oder minder chaotischen Auftritten haben
+        sich die Vier musikalisch und politisch hörbar eingespielt. Die
+        Thüringer spielen Punkrock mit derbem Thrash-Einschlag und machen keinen
+        Hehl aus ihrem proletarischen Klassenstandpunkt. Sie verstehen sich als
+        antikapitalistische und antifaschistische Band, daran lassen die Texte
+        keinen Zweifel.
+        <a href="http://www.melodieundrhythmus.com/mr-6-2015/newcomer-nasty-matter/">
+        Weiterlesen... 
+        </a>
+      </div><!--post-->
+
+      <div class="post">
+        <h1 class="center">Konzert in Gera</h1>
+        <img class="fullWidthImage" src="img/20151107-1.jpg">
+      </div><!--post-->
+
+      <div class="post">
+        <h1 class="center">Konzert in Hannover</h1>
+        <img class="fullWidthImage" src="img/20150822-hannover.png">
+      </div><!--post-->
+
+      <div class="post">
+        <img src="img/construction.JPG">
+        <h1>Neue Internetpräsenz</h1>
+        Nachdem die Seite jetzt sehr lange nicht erreichbar war ist sie jetzt in neuem Gewandt zurück.<br />
+        Es werden noch einige Inhalte hinzugefügt und Unstimmigkeiten behoben.<br />
+        Falls jemand Probleme mit der Anzeige der Webseite haben sollte:<br />
+        <tab>Browser und Version des Browsers an <b>admin@nastymatter.net</b>
+      </div>
+
+    </div><!--content-->
+
+    <div id="footer">
+      <div id="player">
+        <audio id="audio">
+        </audio>
+        <div id="control">
+          <div class="icon"  id="backward"  onclick="backward()"></div>
+          <div class="icon"  id="stop"      onclick="stop()"></div>
+          <div id="playlistContainer">
+            <div class="label" id="currentTitle"></div>
+            <div id="playlistSlideIn">
+              <ul id="playlist">
+                <li>Dolchstoß</li>
+                <li>Neue Wege</li>
+                <li>Wenn die Flut kommt</li>
+              </ul>
+            </div>
+          </div>
+          <div class="icon"  id="play"      onclick="play()"></div>
+          <div class="icon"  id="pause"     onclick="pause()"></div>
+          <div class="icon"  id="forward"   onclick="forward()"></div>
+          <div class="label" id="currentTime">00:00</div>
+          <input type="range" id="seek" min="0" max="100" value="0"
+                 onchange="seek()"/>
+          <div class="label" id="totalTime">00:00</div>
+          <div id="volume">
+            <div class="icon"  id="mute"      onclick="unmute()"></div>
+            <div class="icon"  id="quiet"     onclick="mute()"></div>
+            <div class="icon"  id="moderate"  onclick="mute()"></div>
+            <div class="icon"  id="loud"      onclick="mute()"></div>
+            <div id="volumeSlideIn">
+              <div class="icon"  id="plus" onclick="volumeUp()"></div>
+              <br />
+              <input type="range" id="volumeRange" min="0" max="100" value="100"
+                     orient="vertical" onchange="changeVolume()"/>
+              <br />
+              <div class="icon"  id="minus"     onclick="volumeDown()"></div>
+            </div><!--volumeSlideIn-->
+          </div><!--volume-->
+        </div><!--control-->
+      </div><!--player-->
+      <div id="links">
+        <a href="mailto:kontakt@nastymatter.net">kontakt@nastymatter.net</a>
+        <a href="https://www.facebook.com/nastymatterband">Facebook</a>
+        <a href="https://www.youtube.com/channel/UC1mlShNWiVUqvYZOj-kKfqA">
+          YouTube
+        </a>
+      </div><!--links-->
+      <div id="cookie" onclick="hideCookieMessage()">
+        <p>Diese Seite nutzt Cookies. Mit der Nutzung der Webseite stimmen Sie der Nutzung von Cookies zu.</p>
+        <p>This website uses cookies. By surfing this site, you accept the usage of cookies.</p>
+      </div>
+    </div><!--footer-->
+    <script type="text/javascript" src="js/player.js"></script>
+  </body>
+</html>
