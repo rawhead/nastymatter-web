@@ -1,0 +1,37 @@
+# TODO
+This file holds ideas about future features.
+
+## right-bar
+- there should be some div at the right of the main content
+- contained information:
+..* upcomming gigs
+..* shoutbox
+..* links
+..* website version
+
+## image viewer
+- pictures should be shown in a more professional way
+- it should use some kind of overlay
+
+## content management
+- the posts should not be inserted statically
+- therefore serverside logic has to be used
+..* php?
+..* ruby?
+
+## music page play buttons
+- on the music page there should be play buttons next to the song titles
+- when they are clicked, the music player should play the clicked song
+
+## update "about us"
+- the about text should be updated and include Fel
+- a picture of us has to added (preferably narrow)
+- split the text in different stages, each with picture
+
+## fonts
+- replace current fonts by nicer ones
+- denial as header?
+- lato as deafault?
+
+## youtube
+- integrate videos of live performance
