@@ -103,10 +103,26 @@ body
   display:    block;
 }
 
+#right-bar
+{
+  overflow:         hidden;
+  width:            20%;
+  background-color: #303030;
+  float:            right;
+  color:            white;
+  margin-right:     5%;
+  padding:          1.5em;
+}
+
+#posts
+{
+  float:        left;
+  width:        65%;
+  margin-left:  5%;
+}
+
 .post
 {
-  width:            80%;
-  max-width:        900px;
   margin:           auto;
   background-color: #cfcfcf;
   padding:          1.5em;
