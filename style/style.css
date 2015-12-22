@@ -112,6 +112,7 @@ body
   color:            white;
   margin-right:     5%;
   padding:          1.5em;
+  box-shadow:       6px 6px 7px 1px rgba(50, 50, 50, 0.5);
 }
 
 #posts
